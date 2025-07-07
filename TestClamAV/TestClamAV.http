@@ -1,0 +1,6 @@
+@TestClamAV_HostAddress = http://localhost:5202
+
+GET {{TestClamAV_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

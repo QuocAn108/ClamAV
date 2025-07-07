@@ -1,0 +1,8 @@
+This is a clean test file.
+You can use this file to test the ClamAV scanning functionality.
+
+To test virus detection, you can create a file with EICAR test string:
+X5O!P%@AP[4\PZX54(P^)7CC)7}$EICAR-STANDARD-ANTIVIRUS-TEST-FILE!$H+H*
+
+Note: The above is the EICAR test string that antivirus software will detect as a "test virus".
+It's completely harmless but will trigger virus detection for testing purposes.

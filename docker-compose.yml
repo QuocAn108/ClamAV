@@ -1,0 +1,31 @@
+version: "3.8"
+
+services:
+  clamav:
+    image: clamav/clamav:latest
+    container_name: clamav-server
+    ports:
+      - "3310:3310"
+    volumes:
+      - clamav-data:/var/lib/clamav
+      - ./scan-files:/scan # Mount folder containing files to scan
+    environment:
+      - CLAMAV_NO_FRESHCLAM=false # Auto-update virus database
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "clamdscan", "--ping", "1"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 120s # ClamAV needs time to download virus database
+    deploy:
+      resources:
+        limits:
+          memory: 2G
+          cpus: "1.0"
+        reservations:
+          memory: 1G
+
+volumes:
+  clamav-data:
+    driver: local

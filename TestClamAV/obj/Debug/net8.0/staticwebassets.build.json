@@ -1,0 +1,12 @@
+{
+  "Version": 1,
+  "Hash": "CDaAOQmevQKwKWw+4Lq9afj+OQw58Fe8I5Rcze7lr7A=",
+  "Source": "TestClamAV",
+  "BasePath": "_content/TestClamAV",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}
